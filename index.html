@@ -1,146 +1,91 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishes page</title>
-    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="main.css">
+    <title>Happy Birthday Varshi! 🎉</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="drag-container">
-        <div id="spin-container">
-            <img src="https://i.postimg.cc/2jTxFCnr/SAVE-20250111-194250.png" alt="">
-            <img src="https://i.postimg.cc/zfy4hTNv/1724561970405.png" alt="">
-            <img src="https://i.postimg.cc/2SDK6gcH/IMG-20250111-142252.png" alt="">
-            <img src="https://i.postimg.cc/PJ1Mn5jd/varshini-geddada-20240319-0001.png" alt="">
-            <img src="https://i.postimg.cc/qBhdPV6S/Whats-App-Image-2025-08-16-at-17-51-31-f9bff838.jpg" alt="">
-            <img src="https://i.postimg.cc/4dFszX7b/Whats-App-Image-2025-08-16-at-17-51-31-351cdf78.png" alt="">
-            <img src="https://i.postimg.cc/Y9J25pr2/Whats-App-Image-2025-08-16-at-17-51-32-06abfbcd.png" alt="">
-            <img src="https://i.postimg.cc/fL0Dj6xG/Whats-App-Image-2025-08-16-at-17-51-32-35fbcf6.png" alt="">
-            <img src="https://i.postimg.cc/d0gK14z4/Whats-App-Image-2025-08-16-at-17-51-32-d1da8d61.png" alt="">
-            <img src="https://i.postimg.cc/0NtgzmNX/Bujji-birthday.png" alt="">
-            <p>Happy birthday Bujji 
-                Last Qr code ni scan chey
-            </p>
-        </div>
-        <div id="ground"></div>
-    </div>
-    
-    <div id="music-container"></div>
-    <!-- <div id="canva">
-        <canvas id="canvas"></canvas>
-    </div> -->
-
-    <!-- Audio tự động phát -->
-    <audio id="myAudio" autoplay playsinline>
-        <source src="https://jumpshare.com/share/A4NvOT6HqQhBg0lRiv1A" type="audio/mpeg">
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://jumpshare.com/folder/UzqyaLjiZGq7Y1gtlMAQ" type="audio/mpeg">
     </audio>
 
-    <script src="main.js"></script>
+    <div id="container">
+        <!-- Gift Opening Section -->
+        <div id="giftSection" class="active">
+            <div class="gift-container">
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon-v"></div>
+                    <div class="gift-ribbon-h"></div>
+                </div>
+                <p class="gift-text">Click the gift to open! 🎁</p>
+            </div>
+        </div>
 
-    <script>
-        window.onload = function() {
-            var audio = document.getElementById("myAudio");
-            audio.muted = false;
-            audio.play().catch(function(e) {
-                console.log('Audio playback failed:', e);
-            });
+        <!-- Birthday Message Section -->
+        <div id="messageSection">
+            <div class="message-container">
+                <div class="sticker-container">
+                    <img src="https://media.tenor.com/4Ijycn6xFzUAAAAj/mochi-blue-roses.gif" class="sticker active" />
+                </div>
+                
+                <div class="message-box">
+                    <h1 id="greeting"></h1>
+                    <div id="messageContent">
+                        <p id="message1" class="message hidden">Happy Birthday, Chinni baby! 🎉</p>
+                        <p id="message2" class="message hidden">You're turning 20 today! ✨</p>
+                        <p id="message3" class="message hidden">Hope all your dreams come true this year! 💖</p>
+                        <p id="message4" class="message hidden">You always make everyone smile with your beautiful heart! 😊</p>
+                        <p id="message5" class="message hidden">Remember, you have your best friend who cares about you so much! 💞</p>
+                    </div>
+                    
+                    <div id="birthdayIcons" class="birthday-icons hidden">
+                        <div class="icon" data-icon="🎂">🎂</div>
+                        <div class="icon" data-icon="🎁">🎁</div>
+                        <div class="icon" data-icon="🥳">🥳</div>
+                        <div class="icon" data-icon="💖">💖</div>
+                    </div>
+                    
+                    <button id="nextBtn" class="next-btn hidden">See Photo Gallery! 📸</button>
+                </div>
+            </div>
+        </div>
 
-            // Hiệu ứng pháo hoa và trái tim
-            const canvas = document.getElementById("canvas");
-            const ctx = canvas.getContext("2d");
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        <!-- Photo Gallery Section -->
+        <div id="gallerySection">
+            <div class="gallery-container">
+                <h2>Happy Birthday Memories! 🎊</h2>
+                <div id="carousel">
+                    <div class="carousel-container">
+                        <img src="https://i.postimg.cc/2jTxFCnr/SAVE-20250111-194250.png" alt="Memory 1">
+                        <img src="https://i.postimg.cc/zfy4hTNv/1724561970405.png" alt="Memory 2">
+                        <img src="https://i.postimg.cc/2SDK6gcH/IMG-20250111-142252.png" alt="Memory 3">
+                        <img src="https://i.postimg.cc/PJ1Mn5jd/varshini-geddada-20240319-0001.png" alt="Memory 4">
+                        <img src="https://i.postimg.cc/qBhdPV6S/Whats-App-Image-2025-08-16-at-17-51-31-f9bff838.jpg" alt="Memory 5">
+                        <img src="https://i.postimg.cc/4dFszX7b/Whats-App-Image-2025-08-16-at-17-51-31-351cdf78.png" alt="Memory 6">
+                        <img src="https://i.postimg.cc/Y9J25pr2/Whats-App-Image-2025-08-16-at-17-51-32-06abfbcd.png" alt="Memory 7">
+                        <img src="https://i.postimg.cc/fL0Dj6xG/Whats-App-Image-2025-08-16-at-17-51-32-35fbcf6.png" alt="Memory 8">
+                        <img src="https://i.postimg.cc/d0gK14z4/Whats-App-Image-2025-08-16-at-17-51-32-d1da8d61.png" alt="Memory 9">
+                        <img src="https://i.postimg.cc/0NtgzmNX/Bujji-birthday.png" alt="Birthday Special">
+                    </div>
+                </div>
+                <p class="gallery-message">Scan the QR code for a special surprise! 💝</p>
+            </div>
+        </div>
+    </div>
 
-            function random(min, max) {
-                return Math.random() * (max - min) + min;
-            }
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworks"></canvas>
 
-            function Firework(x, y) {
-                this.x = x;
-                this.y = y;
-                this.radius = random(2, 4);
-                this.color = `hsl(${random(0, 360)}, 100%, 50%)`;
-                this.vx = random(-3, 3);
-                this.vy = random(-3, 3);
-                this.life = 100;
-            }
-
-            Firework.prototype.draw = function () {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.fill();
-            };
-
-            Firework.prototype.update = function () {
-                this.x += this.vx;
-                this.y += this.vy;
-                this.life--;
-            };
-
-            function Heart(x, y) {
-                this.x = x;
-                this.y = y;
-                this.size = random(20, 40);
-                this.color = 'red';
-                this.vy = random(-2, -1);
-                this.opacity = 1;
-            }
-
-            Heart.prototype.draw = function () {
-                ctx.beginPath();
-                ctx.moveTo(this.x, this.y);
-                ctx.bezierCurveTo(this.x - this.size / 2, this.y - this.size / 2, this.x - this.size, this.y + this.size / 3, this.x, this.y + this.size);
-                ctx.bezierCurveTo(this.x + this.size, this.y + this.size / 3, this.x + this.size / 2, this.y - this.size / 2, this.x, this.y);
-                ctx.fillStyle = this.color;
-                ctx.globalAlpha = this.opacity;
-                ctx.fill();
-                ctx.globalAlpha = 1;
-            };
-
-            Heart.prototype.update = function () {
-                this.y += this.vy;
-                this.opacity -= 0.01;
-            };
-
-            let fireworks = [];
-            let hearts = [];
-
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                if (Math.random() < 0.1) {
-                    fireworks.push(new Firework(random(0, canvas.width), random(0, canvas.height)));
-                }
-                if (Math.random() < 0.05) {
-                    hearts.push(new Heart(random(0, canvas.width), canvas.height));
-                }
-
-                fireworks.forEach((firework, index) => {
-                    firework.draw();
-                    firework.update();
-                    if (firework.life <= 0) {
-                        fireworks.splice(index, 1);
-                    }
-                });
-
-                hearts.forEach((heart, index) => {
-                    heart.draw();
-                    heart.update();
-                    if (heart.opacity <= 0) {
-                        hearts.splice(index, 1);
-                    }
-                });
-
-                requestAnimationFrame(animate);
-            }
-            animate();
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
