@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Varshi! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-hkwkKVFH.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://jumpshare.com/folder/UzqyaLjiZGq7Y1gtlMAQ" type="audio/mpeg">
+    </audio>
+
+    <div id="container">
+        <!-- Gift Opening Section -->
+        <div id="giftSection" class="active">
+            <div class="gift-container">
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon-v"></div>
+                    <div class="gift-ribbon-h"></div>
+                </div>
+                <p class="gift-text">Click the gift to open! 🎁</p>
+            </div>
+        </div>
+
+        <!-- Birthday Message Section -->
+        <div id="messageSection">
+            <div class="message-container">
+                <div class="sticker-container">
+                    <img src="https://media.tenor.com/4Ijycn6xFzUAAAAj/mochi-blue-roses.gif" class="sticker active" />
+                </div>
+                
+                <div class="message-box">
+                    <h1 id="greeting"></h1>
+                    <div id="messageContent">
+                        <p id="message1" class="message hidden">Happy Birthday, Chinni baby! 🎉</p>
+                        <p id="message2" class="message hidden">You're turning 20 today! ✨</p>
+                        <p id="message3" class="message hidden">Hope all your dreams come true this year! 💖</p>
+                        <p id="message4" class="message hidden">You always make everyone smile with your beautiful heart! 😊</p>
+                        <p id="message5" class="message hidden">Remember, you have your best friend who cares about you so much! 💞</p>
+                    </div>
+                    
+                    <div id="birthdayIcons" class="birthday-icons hidden">
+                        <div class="icon" data-icon="🎂">🎂</div>
+                        <div class="icon" data-icon="🎁">🎁</div>
+                        <div class="icon" data-icon="🥳">🥳</div>
+                        <div class="icon" data-icon="💖">💖</div>
+                    </div>
+                    
+                    <button id="nextBtn" class="next-btn hidden">See Photo Gallery! 📸</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div id="gallerySection">
+            <div class="gallery-container">
+                <h2>Happy Birthday Memories! 🎊</h2>
+                <div id="carousel">
+                    <div class="carousel-container">
+                        <img src="https://i.postimg.cc/2jTxFCnr/SAVE-20250111-194250.png" alt="Memory 1">
+                        <img src="https://i.postimg.cc/zfy4hTNv/1724561970405.png" alt="Memory 2">
+                        <img src="https://i.postimg.cc/2SDK6gcH/IMG-20250111-142252.png" alt="Memory 3">
+                        <img src="https://i.postimg.cc/PJ1Mn5jd/varshini-geddada-20240319-0001.png" alt="Memory 4">
+                        <img src="https://i.postimg.cc/qBhdPV6S/Whats-App-Image-2025-08-16-at-17-51-31-f9bff838.jpg" alt="Memory 5">
+                        <img src="https://i.postimg.cc/4dFszX7b/Whats-App-Image-2025-08-16-at-17-51-31-351cdf78.png" alt="Memory 6">
+                        <img src="https://i.postimg.cc/Y9J25pr2/Whats-App-Image-2025-08-16-at-17-51-32-06abfbcd.png" alt="Memory 7">
+                        <img src="https://i.postimg.cc/fL0Dj6xG/Whats-App-Image-2025-08-16-at-17-51-32-35fbcf6.png" alt="Memory 8">
+                        <img src="https://i.postimg.cc/d0gK14z4/Whats-App-Image-2025-08-16-at-17-51-32-d1da8d61.png" alt="Memory 9">
+                        <img src="https://i.postimg.cc/0NtgzmNX/Bujji-birthday.png" alt="Birthday Special">
+                    </div>
+                </div>
+                <p class="gallery-message">Scan the QR code for a special surprise! 💝</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworks"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+
+  <!-- Update title and description for a birthday theme -->
+  <title>varshi birthday-special</title>
+  <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico" />
+  <meta name="description" content="A special birthday greeting" />
+  <link rel="stylesheet" crossorigin href="/assets/style-hkwkKVFH.css">
+</head>
+
+<body style="background: linear-gradient(to bottom, #ffe1e1, #ff217de0), url(/assets/r-D7MEh2UI.jpg);
+    height: 100vh;">
+  <audio src="https://jumpshare.com/share/A4NvOT6HqQhBg0lRiv1A" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <!-- Wallpaper -->
+    <img src="" id="wallpaper" />
+  </div>
+
+  <div id="Content">
+    <div id="kadoIn">
+      <!-- Gift Button -->
+      <img src="/assets/Valentine-Surprise-0r-CM8O4.png" alt="Twaraga Gift open chey " />
+    </div>
+    <p id="ket">
+      <span style="font-style: italic; color: rgb(0,0,0); margin-top: 3px !important; ">Twaraga Gift open chey, cutie:3</span>
+    </p>
+
+    <div class="kumpulanstiker" style="margin-top: 95px;">
+      <!-- Stickers for Content -->
+      <img src="https://media.tenor.com/4Ijycn6xFzUAAAAj/mochi-blue-roses.gif" id="fotostiker" />
+      <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker1" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2" />
+      <img src="https://media.tenor.com/snFoLI-S9CQAAAAj/milk-and-mocha.gif" id="fotostiker3" />
+      <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker4" />
+      <img src="https://i.postimg.cc/0NtgzmNX/Bujji-birthday.png" id="fotostiker5" />
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id="bq" data-text="💞">
+        <!-- Update the messages for a birthday greeting -->
+        <p id="kalimat">
+          Happy Birthday, To you Chinni babieeeee luuuuu .....
+        </p>
+
+        <!-- Message -->
+        <p id="pesan1">Ivvani click chesei Fast gaaa!!! 🎉</p>
+        <div id="kolombaru">
+          <li id="lv1">🎂</li>
+          <li id="lv2">🎁</li>
+          <li id="lv3">🥳</li>
+          <li id="lv4">💖</li>
+        </div>
+
+        <p id="pesan2">Every Year Nuv ilane cheskovali ni Birthday ni  ✨</p>
+        <p id="pesan3">You are Turning into 20 years ...</p>
+        <p id="pesan4" class="sty2">prathi birthday tho patu age kuda perugutundhi , Responsibiltes kuda</p>
+        <p id="pesan5" class="sty2">
+         Hope , ni dreams ni nuv achieve cheyyali , Ilane eappudu navvuthu undali. You know what nuv navvithe bavuntav , Chala marchesav nannu good boi laga , Na side nunchi idhoka chinna suprise 💞, A very special Wishes from your special person...
+        </p>
+        <p id="pesan6" class="sty2">
+         Nikantu eavaru leru anukoku , niku ni bestfriend unnadu , Vadi life lo kuda you the only special....Nuvve na first priority kuda....Situations gurinchi eakkuva alochinchaku., Na pilla always strong uuuu kadhaa !!!!
+        </p>
+
+        <!-- Next Button -->
+        <p id="opsL">Ni birthday ni celebrate chedham CLICK CHEY!</p>
+      </blockquote>
+    </div>
+
+    <!-- Send Message Button -->
+    <div id="Tombol"><a id="By">&#128140; NEXT , nokku </a></div>
+
+    <!-- Rejected Message (if needed) -->
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif" />
+      <p id="kataditolak">
+        Ayyoooo !! Birthday celebration ni skip cheyyalev le nuv 
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Main script remains similar; further changes are made in a.js if needed.
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    
+    // Create audio element with proper handling for Jumpshare URL
+    const audio = new Audio("https://jumpshare.com/share/A4NvOT6HqQhBg0lRiv1A");
+    audio.crossOrigin = "anonymous";
+    audio.preload = "auto";
+    
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: "#FF0040",
+      imageHeight: 80,
+    });
+
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        // Play audio with error handling
+        audio.play().then(() => {
+          console.log("Audio started playing successfully");
+        }).catch(error => {
+          console.log("Audio play failed:", error);
+          // Fallback: try to play after user gesture
+          audio.play();
+        });
+        fungsiAwal = 1;
+        kadoIn.style =
+          "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 500);
+      }
+    };
+
+    async function inipesan() {
+      var { value: nama } = await swals.fire({
+        title: "Ni Nick name entiiii???",
+        input: "text",
+      });
+      if (nama && nama.length < 11) {
+        window.nama = nama;
+        vketikhalo = "Happy Birthday, " + nama + "!";
+        mulainama();
+      } else {
+        await Swal.fire({
+          title: "Entii nenu antha pedha peru pettana niku??",
+          text: "Nenu pettina name Enter chey",
+          icon: "warning",
+        });
+        inipesan();
+      }
+    }
+
+    var tanya = "Ni birthday ni ela celebrate chedham cheppu ";
+    var opstanya = "Choose chey:";
+    var tompositif = "Ma vadu celebrate chesthe nenu kadhu antana, padha 🎉";
+    var tomnegatif = "Next time cheskundham le Not exicted ";
+
+    async function pertanyaan() {
+      var { isConfirmed: prtanya } = await swals.fire({
+        title: nama + ", " + tanya,
+        text: "" + opstanya,
+        imageUrl: "" + fotostiker5.src,
+        showCancelButton: true,
+        confirmButtonText: "" + tompositif,
+        cancelButtonText: "" + tomnegatif,
+      });
+      if (prtanya) {
+        pesanwhatsapp = "Yes " + nama + ", Start inkaaa!";
+        menuju();
+      } else {
+        pesanwhatsapp = nama + ", Miss avvaku birthday celebration ni !";
+        await swalst.fire({
+          title: "" + kataditolak.innerHTML,
+          timer: 2000,
+          imageUrl: "" + stikerditolak.src,
+        });
+        menuju();
+      }
+    }
+  </script>
+  <script src="a.js"></script>
+</body>
+
+</html>
